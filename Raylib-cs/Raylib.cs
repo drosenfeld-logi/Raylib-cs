@@ -1449,7 +1449,7 @@ namespace Raylib_cs
 
         /// <summary>Set color formatted into destination pixel pointer</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void SetPixelColor(IntPtr srcPtr, Color color, PixelFormat format);
+        public static extern void SetPixelColor(IntPtr dstPtr, Color color, PixelFormat format);
 
         /// <summary>Get pixel data size in bytes for certain format</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -1491,7 +1491,7 @@ namespace Raylib_cs
 
         /// <summary>Generate image font atlas using chars info</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern Image GenImageFontAtlas(IntPtr chars, ref IntPtr recs, int charsCount, int fontSize, int padding, int packMethod);
+        public static extern Image GenImageFontAtlas(IntPtr chars, IntPtr recs, int charsCount, int fontSize, int padding, int packMethod);
 
         /// <summary>Unload font chars info data (RAM)
         /// chars refers to GlpyhInfo *</summary>
