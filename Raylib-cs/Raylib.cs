@@ -24,14 +24,15 @@ namespace Raylib_cs
         /// <summary>
         /// Logging: Redirect trace log messages
         /// WARNING: This callback is intended for advance users
-        /// </summary>  
+        /// </summary>
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate void TraceLogCallback(TraceLogLevel logLevel, string text, IntPtr args);
+
         /// <summary>
         /// FileIO: Load binary data
         /// WARNING: This callback is intended for advance users
-        /// </summary>  
-        /// <returns><see cref="IntPtr"/> refers to a unsigned char *</returns> 
+        /// </summary>
+        /// <returns><see cref="IntPtr"/> refers to a unsigned char *</returns>
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate IntPtr LoadFileDataCallback(string fileName, ref int bytesRead);
 
@@ -1491,7 +1492,7 @@ namespace Raylib_cs
 
         /// <summary>Generate image font atlas using chars info</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern Image GenImageFontAtlas(IntPtr chars, IntPtr recs, int charsCount, int fontSize, int padding, int packMethod);
+        public static extern Image GenImageFontAtlas(IntPtr chars, ref IntPtr recs, int charsCount, int fontSize, int padding, int packMethod);
 
         /// <summary>Unload font chars info data (RAM)
         /// chars refers to GlpyhInfo *</summary>
@@ -1854,7 +1855,7 @@ namespace Raylib_cs
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DrawBillboardRec(Camera3D camera, Texture2D texture, Rectangle source, Vector3 center, float size, Color tint);
 
-        // Draw a billboard texture defined by source and rotation
+        /// <summary>Draw a billboard texture defined by source and rotation</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DrawBillboardPro(Camera3D camera, Texture2D texture, Rectangle source, Vector3 position, Vector3 up, Vector2 size, Vector2 origin, float rotation, Color tint);
 
