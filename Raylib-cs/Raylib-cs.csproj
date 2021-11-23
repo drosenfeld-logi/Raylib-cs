@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -39,6 +39,7 @@
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0"/>
   </ItemGroup>
 
+  <!--
   <ItemGroup>
     <Content Include="runtimes/**" Link="runtimes/%(RecursiveDir)/%(Filename)%(Extension)">
       <PackagePath>runtimes/</PackagePath>
@@ -46,4 +47,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  -->
+  
 </Project>

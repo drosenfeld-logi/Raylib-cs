@@ -376,6 +376,13 @@ namespace Raylib_cs
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void rlSetBlendModeFactors(int glSrcFactor, int glDstFactor, int glEquation);
 
+        /// <summary> Enable color blending (via glEnable(GL_BLEND) </summary>
+        [DllImport("raylib", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void rlEnableColorBlend();
+
+        /// <summary> Disable color blending (via glDisable(GL_BLEND) </summary>
+        [DllImport("raylib", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void rlDisableColorBlend();
 
         // ------------------------------------------------------------------------------------
         // Functions Declaration - rlgl functionality
