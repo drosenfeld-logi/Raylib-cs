@@ -28,15 +28,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Easings.cs"/>
-    <Compile Include="Raylib.cs"/>
-    <Compile Include="Raymath.cs"/>
-    <Compile Include="Rlgl.cs"/>
-    <None Include="../Logo/raylib-cs_64x64.png" Pack="true" PackagePath=""/>
+    <Compile Include="Easings.cs" />
+    <Compile Include="Raylib.cs" />
+    <Compile Include="Raymath.cs" />
+    <Compile Include="Rlgl.cs" />
+    <None Include="../Logo/raylib-cs_64x64.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0"/>
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\raylib\projects\VS2019\raylib\raylib.vcxproj" />
   </ItemGroup>
 
   <!--
