@@ -2718,7 +2718,7 @@ namespace Raylib_cs
 
         /// <summary>Export image data to file</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void ExportImage(Image image, string fileName);
+        public static extern bool ExportImage(Image image, string fileName);
 
         /// <summary>Export image as code file defining an array of bytes</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -2990,11 +2990,11 @@ namespace Raylib_cs
 
         /// <summary>Get pixel data from GPU texture and return an Image</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern Image GetTextureData(Texture2D texture);
+        public static extern Image LoadImageFromTexture(Texture2D texture);
 
         /// <summary>Get pixel data from screen buffer and return an Image (screenshot)</summary>
         [DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-        public static extern Image GetScreenData();
+        public static extern Image LoadImageFromScreen();
 
 
         // Texture configuration functions
